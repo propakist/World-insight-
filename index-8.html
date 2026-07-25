@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Insight — Independent Analysis on Global Affairs</title>
+<meta name="description" content="World Insight covers global politics, business, technology and culture with clear, independent reporting and analysis.">
+<link rel="canonical" href="https://world-insight.netlify.app/">
+<meta property="og:title" content="World Insight">
+<meta property="og:description" content="Independent analysis on global affairs, business, technology and culture.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://world-insight.netlify.app/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsMediaOrganization",
+  "name": "World Insight",
+  "url": "https://world-insight.netlify.app/",
+  "description": "Independent analysis on global affairs, business, technology and culture."
+}
+</script>
+</head>
+<body>
+
+<div class="dateline">
+  <div class="wrap">
+    <span id="dateline-clock">Loading edition…</span>
+    <span><span class="edition">Independent · Global Coverage</span></span>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap">
+    <a href="index.html" class="brand">World<span>Insight</span><small>Global Affairs &amp; Analysis</small></a>
+    <form class="header-search" id="search-form">
+      <input type="search" id="search-input" placeholder="Search articles…" aria-label="Search articles">
+      <button type="submit" aria-label="Search">Go</button>
+    </form>
+  </div>
+</header>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html">Home</a>
+    <a href="index.html?category=World">World</a>
+    <a href="index.html?category=Politics">Politics</a>
+    <a href="index.html?category=Business">Business</a>
+    <a href="index.html?category=Technology">Technology</a>
+    <a href="index.html?category=Culture">Culture</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="hero" id="hero-section">
+  <div class="wrap hero-grid">
+    <div class="hero-feature" id="hero-feature">
+      <div class="state-msg">Loading top story…</div>
+    </div>
+    <div class="hero-side" id="hero-side"></div>
+  </div>
+</section>
+
+<main class="wrap layout">
+  <div>
+    <div class="section-title" id="feed-title">Latest Stories</div>
+    <div class="post-grid" id="post-grid">
+      <div class="state-msg">Loading articles…</div>
+    </div>
+    <div class="load-more" id="load-more-wrap" style="display:none;">
+      <button class="btn ghost" id="load-more-btn">Load More Stories</button>
+    </div>
+  </div>
+
+  <aside>
+    <div class="widget" id="popular-widget">
+      <div class="section-title">Most Read</div>
+      <div id="popular-list"></div>
+    </div>
+    <div class="widget">
+      <div class="section-title">Topics</div>
+      <div class="tag-list" id="tag-list"></div>
+    </div>
+    <div class="widget newsletter">
+      <h4>Stay Informed</h4>
+      <p>Original analysis on world affairs, delivered occasionally — no spam.</p>
+      <form id="newsletter-form">
+        <input type="email" placeholder="you@example.com" required>
+        <button type="submit">Join</button>
+      </form>
+    </div>
+  </aside>
+</main>
+
+<footer class="site-foot">
+  <div class="foot-grid">
+    <div>
+      <a href="index.html" class="brand">World Insight</a>
+      <p>Independent digital coverage of global politics, business, technology and culture — written for readers who want context, not noise.</p>
+    </div>
+    <div>
+      <h5>Sections</h5>
+      <ul>
+        <li><a href="index.html?category=World">World</a></li>
+        <li><a href="index.html?category=Politics">Politics</a></li>
+        <li><a href="index.html?category=Business">Business</a></li>
+        <li><a href="index.html?category=Technology">Technology</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Company</h5>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="dmca.html">DMCA Policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">© <span id="year"></span> World Insight. All rights reserved.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="assets/js/supabase-config.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  const nf = document.getElementById("newsletter-form");
+  if (nf) nf.addEventListener("submit", (e) => { e.preventDefault(); alert("Thanks — you're on the list."); nf.reset(); });
+
+  function updateClock() {
+    const el = document.getElementById("dateline-clock");
+    const now = new Date();
+    el.textContent = now.toLocaleString("en-GB", {
+      weekday: "short", day: "2-digit", month: "short", year: "numeric",
+      hour: "2-digit", minute: "2-digit", timeZone: "UTC"
+    }) + " UTC";
+  }
+  updateClock();
+  setInterval(updateClock, 30000);
+</script>
+</body>
+</html>

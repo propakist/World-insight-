@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | World Insight</title>
+<meta name="description" content="Get in touch with the World Insight editorial team — send a tip, a correction, or a general inquiry.">
+<link rel="canonical" href="https://world-insight.netlify.app/contact.html">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="dateline"><div class="wrap"><span>World Insight</span><span class="edition">Independent · Global Coverage</span></div></div>
+<header class="site-head"><div class="wrap">
+  <a href="index.html" class="brand">World<span>Insight</span><small>Global Affairs &amp; Analysis</small></a>
+</div></header>
+<nav class="site-nav"><div class="wrap">
+  <a href="index.html">Home</a>
+  <a href="index.html?category=World">World</a>
+  <a href="index.html?category=Politics">Politics</a>
+  <a href="index.html?category=Business">Business</a>
+  <a href="index.html?category=Technology">Technology</a>
+  <a href="about.html">About</a>
+  <a href="contact.html" class="active">Contact</a>
+</div></nav>
+
+<main class="wrap static-page">
+  <h1>Contact Us</h1>
+  <p class="updated">We read every message</p>
+  <p>Have a story tip, a correction, a partnership inquiry, or general feedback? Send us a message using the form below and we'll get back to you as soon as we can.</p>
+
+  <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contact">
+    <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+    <div>
+      <label for="c-name">Full Name</label>
+      <input type="text" id="c-name" name="name" required>
+    </div>
+    <div>
+      <label for="c-email">Email Address</label>
+      <input type="email" id="c-email" name="email" required>
+    </div>
+    <div>
+      <label for="c-subject">Subject</label>
+      <input type="text" id="c-subject" name="subject" required>
+    </div>
+    <div>
+      <label for="c-message">Message</label>
+      <textarea id="c-message" name="message" required></textarea>
+    </div>
+    <button class="btn" type="submit">Send Message</button>
+    <p class="form-note">Submissions are handled through Netlify Forms and land directly in your Netlify dashboard.</p>
+  </form>
+</main>
+
+<footer class="site-foot">
+  <div class="foot-grid">
+    <div>
+      <a href="index.html" class="brand">World Insight</a>
+      <p>Independent digital coverage of global politics, business, technology and culture — written for readers who want context, not noise.</p>
+    </div>
+    <div><h5>Sections</h5><ul>
+      <li><a href="index.html?category=World">World</a></li>
+      <li><a href="index.html?category=Politics">Politics</a></li>
+      <li><a href="index.html?category=Business">Business</a></li>
+      <li><a href="index.html?category=Technology">Technology</a></li>
+    </ul></div>
+    <div><h5>Company</h5><ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="dmca.html">DMCA Policy</a></li>
+    </ul></div>
+    <div><h5>Legal</h5><ul>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="disclaimer.html">Disclaimer</a></li>
+      <li><a href="terms.html">Terms &amp; Conditions</a></li>
+    </ul></div>
+  </div>
+  <div class="foot-bottom">© <span id="year"></span> World Insight. All rights reserved.</div>
+</footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
